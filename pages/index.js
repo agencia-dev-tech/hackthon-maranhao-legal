@@ -27,14 +27,17 @@ export default function Home() {
             </div>
           </div>
           <div className="contact">
-            <Link href="http://informatica.tjmg.jus.br" >
-              <div className="contact-item">
-                <h3>Tribunal Geral de São Luis</h3>
-                <div className="contact-item-content">
-                    <a target="_blank" >http://informatica.tjmg.jus.br</a>
+            <h2>Contatos</h2>
+            <div className="content">
+              <Link href="http://informatica.tjmg.jus.br" >
+                <div className="contact-item">
+                  <h3>Tribunal Geral de São Luis</h3>
+                  <div className="contact-item-content">
+                      <a target="_blank" >http://informatica.tjmg.jus.br</a>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </div>
           <img className="partners" src="./image/parceiros.png" alt="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" title="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" />
         </div>

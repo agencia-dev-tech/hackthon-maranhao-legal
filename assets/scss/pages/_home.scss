@@ -76,11 +76,15 @@
     .contact {
       width: 80%;
       margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
 
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
       h2 {
+        font-size: 18px;
+      }
+
+      h3 {
         font-size: 18px;
       }
     }
