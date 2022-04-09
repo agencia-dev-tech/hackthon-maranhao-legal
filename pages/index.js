@@ -16,6 +16,14 @@ export default function Home() {
     setCpf(value);
   }
 
+  function handleGetDocuments(){
+    try {
+      
+    } catch (error) {
+      
+    }
+  }
+
   return (
     <div className="home">
       <div className="content">
@@ -48,13 +56,13 @@ export default function Home() {
                   </a>
                 </Link>
 
-                <Link href="#">
+                <Link href="tel:+08007071581">
                   <a target="_blank" >
                     <div className="icon-container">
                       <MdPhone size={15}/>
                       <h3>Telejudiciário</h3>
                     </div>
-                    <h4>(31) 3237-7060</h4>
+                    <h4>0800-7071-581</h4>
                   </a>
                 </Link>
               </div>
@@ -68,7 +76,7 @@ export default function Home() {
                     <h4>t.me/puxardadosgrati</h4>
                   </a>
                 </Link>
-                <Link href="https://t.me/puxardadosgrati">
+                <Link href="#">
                   <a target="_blank" >
                     <div className="icon-container">
                       <HiSpeakerphone size={15}/>
