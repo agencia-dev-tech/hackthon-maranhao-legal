@@ -74,18 +74,55 @@
     }
 
     .contact {
-      width: 80%;
+      width: 100%;
+      max-width: 390px;
       margin: 0 auto;
 
       // display: flex;
       // justify-content: center;
       // align-items: center;
-      h2 {
-        font-size: 18px;
-      }
+      .icon-container {
+        color: var(--primaryColor);
+        margin-right: 8px;
 
-      h3 {
-        font-size: 18px;
+        h2 {
+          font-size: 20px;
+          color: var(--primaryColor);
+        }
+       
+      }
+      .content {
+        margin-top: 16px;
+        flex-direction: column;
+
+        .group {
+          display: flex;
+          // margin-bottom: 16px;
+          flex-wrap: wrap;
+       
+
+          h3 {
+            font-size: 16px;
+            color: var(--secondColor);
+          }
+          h4 {
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--black);
+          }
+
+          a {
+            width: 250px;
+            margin-bottom: 16px;
+            svg {
+              font-size: 20px;
+              color: var(--secondColor);
+            }
+          }
+          a:nth-child(2) {
+            width: 140px;
+          }
+        }
       }
     }
   }

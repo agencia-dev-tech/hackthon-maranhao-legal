@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import InputMask from 'react-input-mask';
 import Link from 'next/link'
+import { MdContacts, MdPhone } from 'react-icons/md';
+import { GiInjustice } from "react-icons/gi";
+import { RiTelegramFill } from "react-icons/ri";
+import { HiSpeakerphone } from "react-icons/hi";
 
 
 export default function Home() {
@@ -27,16 +31,53 @@ export default function Home() {
             </div>
           </div>
           <div className="contact">
-            <h2>Contatos</h2>
+            <div className="icon-container">
+              <MdContacts size={20} />
+              <h2>Contatos</h2>
+            </div>
             <div className="content">
-              <Link href="http://informatica.tjmg.jus.br" >
-                <div className="contact-item">
-                  <h3>Tribunal Geral de São Luis</h3>
-                  <div className="contact-item-content">
-                      <a target="_blank" >http://informatica.tjmg.jus.br</a>
-                  </div>
-                </div>
-              </Link>
+              <div className="group"> 
+                
+                <Link href="http://informatica.tjmg.jus.br">
+                  <a target="_blank" >
+                    <div className="icon-container">
+                      <GiInjustice size={15}/>
+                      <h3>Tribunal Geral de São Luis</h3>
+                    </div>
+                    <h4>www.informatica.tjmg.jus.br</h4>
+                  </a>
+                </Link>
+
+                <Link href="#">
+                  <a target="_blank" >
+                    <div className="icon-container">
+                      <MdPhone size={15}/>
+                      <h3>Telejudiciário</h3>
+                    </div>
+                    <h4>(31) 3237-7060</h4>
+                  </a>
+                </Link>
+              </div>
+              <div className="group"> 
+                <Link href="https://t.me/puxardadosgrati">
+                  <a target="_blank" >
+                    <div className="icon-container">
+                      <RiTelegramFill size={15}/>
+                      <h3>Telegram</h3>
+                    </div>
+                    <h4>t.me/puxardadosgrati</h4>
+                  </a>
+                </Link>
+                <Link href="https://t.me/puxardadosgrati">
+                  <a target="_blank" >
+                    <div className="icon-container">
+                      <HiSpeakerphone size={15}/>
+                      <h3>Plantão do PJE</h3>
+                    </div>
+                    <h4>t.me/puxardadosgrati</h4>
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
           <img className="partners" src="./image/parceiros.png" alt="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" title="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" />

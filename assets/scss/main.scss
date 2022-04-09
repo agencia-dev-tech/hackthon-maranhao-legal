@@ -8,6 +8,7 @@ html {
   --secondColor: #24387F;
   --bg: #F8F5F0;
   --textLigth: #F8F5F0;
+  --black: #303030;
 }
 
 
@@ -64,8 +65,23 @@ button.primary {
   cursor: pointer;
 }
 
+.icon-container {
+  width: fit-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    margin-right: 4px;
+  }
+}
+
 a {
   color: var(--secondColor);
+  text-decoration: none;
+  // h3 {
+  //   color: var(--black);
+  // }
 }
 
 // Pages
