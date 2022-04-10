@@ -1,12 +1,14 @@
 import { Html, Head, Main, NextScript, DocumentHead } from 'next/document'
 
-export default function Document() {
+export default function Document({ locale }) {
+
   return (
-    <Html lang="pt-br">
+    <Html lang={locale}>
       <Head>
         <meta httpEquiv="Content-Language" content="pt-br" />
 
-    
+        <meta charSet="utf-8" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" as="font" crossOrigin="" />
@@ -48,4 +50,11 @@ export default function Document() {
       </body>
     </Html>
   )
+}
+function getInitialProps({ renderPage, req }) {
+
+  return {
+    ...page,
+    locale: req.locale,
+  };
 }

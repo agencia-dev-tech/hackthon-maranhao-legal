@@ -37,17 +37,22 @@ function Visuallaw({href}) {
   function handldeHearDocument() {
     console.log("joans")
     speaktext("Resumo da Sentença");
+    
+    speaktext(`CPF: ${visualLaw?.data?.cpf}`);
     speaktext(`Processo de numero: ${visualLaw?.data?.processNumber}`);
 
-    speaktext(`Reclamante: ${visualLaw?.pdfData?.author}`);
+    speaktext(`Ultima Atualização: ${visualLaw?.data?.distributionDate}`);
+    speaktext(`Órgão Julgador: ${visualLaw?.pdfData?.judgingBody}`);
+    speaktext(`Jurisdição: ${visualLaw?.pdfData?.jurisdiction}`);
+    speaktext(`Classe Judicial: ${visualLaw?.pdfData?.judicialClass}`);
 
     speaktext(`Reclamado: ${visualLaw?.pdfData?.defendant}`);
 
     speaktext(`Resultado`);
     speaktext(`Movimento: ${visualLaw?.pdfData?.conclusion}`);
-    speaktext(`Descrição do movimento`);
+    speaktext(visualLaw?.pdfData?.defendant);
 
-     speaktext(`Caso ainda tenha duvidas fale com seu advogado ou defensor público.`);
+     speaktext(`Caso ainda tenha dúvidas, fale com seu advogado(a) ou defensor(a) público(a).`);
   }
 
   useEffect(() => {

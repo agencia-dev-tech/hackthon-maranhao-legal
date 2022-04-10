@@ -99,7 +99,7 @@ export default function Home() {
                   <a target="_blank" >
                     <div className="icon-container">
                       <GiInjustice size={15}/>
-                      <h3 aria-label="3">TJ do Estado do Maranhão</h3>
+                      <h3 aria-label="3">Tribunal de Justiça do Maranhão</h3>
                     </div>
                     <h4 aria-label="4" >https://www.tjma.jus.br/</h4>
                   </a>
