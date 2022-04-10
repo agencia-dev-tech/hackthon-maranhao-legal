@@ -14,10 +14,18 @@ html {
   --green700: #128A89;
 }
 
-
-
 html[data-theme='dark'] {
-  background: var(--primaryColor);
+  // Dark
+  --secondColor: #F8F5F0;
+  --bg: #303030;
+  --textLigth: #F8F5F0;
+  --textLigth300: #F8F5F0;
+  --black: #F8F5F0;
+
+  button.primary {
+    background-color: var(--bg);
+    border: 1px solid var(--textLigth);
+  }
 }
 
 * {
@@ -38,6 +46,10 @@ html, body, #__next {
 
 h1, h2, h3, h4, p {
   margin: 0;
+}
+
+label {
+  color: var(--black);
 }
 
 .container {
@@ -84,6 +96,14 @@ a {
 
 .enabled {
   margin-right: 20px;
+}
+
+.change-theme {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  border: none;
+  background: transparent;
 }
 
 // Pages

@@ -18,6 +18,7 @@ import { useApp } from "../hooks/AppContext";
 // Icons
 import { FaUserAlt } from "react-icons/fa";
 import { HiOutlineDocumentText } from "react-icons/hi";
+import { ThemeToggle } from '../components/ThemeToggle.js';
 
 export default function Documentos() {
   const { docs } = useApp();
@@ -33,6 +34,9 @@ export default function Documentos() {
     <div className="documents container">
     
       <h1>Veja seus processos abaixo</h1>
+
+      <ThemeToggle />
+
       <div className="info">
         <div className="icon-container">
           <FaUserAlt size={15} />
