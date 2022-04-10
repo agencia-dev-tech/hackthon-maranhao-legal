@@ -125,13 +125,13 @@ export default function Home() {
                     <h4>t.me/muraltjma</h4>
                   </a>
                 </Link>
-                <Link href="tel:+983194-660">
+                <Link href="tel:+983194-6600">
                   <a target="_blank" >
                     <div className="icon-container">
                       <HiSpeakerphone size={15}/>
                       <h3>Informática TJMA</h3>
                     </div>
-                    <h4>(98) 3194-660</h4>
+                    <h4>(98) 3194-6600</h4>
                   </a>
                 </Link>
               </div>

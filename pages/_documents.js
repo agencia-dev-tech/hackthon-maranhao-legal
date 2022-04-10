@@ -5,6 +5,7 @@ export default function Document({ locale }) {
   return (
     <Html lang={locale}>
       <Head>
+
         <meta httpEquiv="Content-Language" content="pt-br" />
 
         <meta charSet="utf-8" />
@@ -39,8 +40,6 @@ export default function Document({ locale }) {
         <meta property="twitter:title" content="Entenda de forma simples e intuitiva a sentença do seu processo judiciário" />
         <meta property="twitter:description" content="Maranhão Legal é o principal site para que os cidadãos maranhenses entendam e encontrem as sentenças dos seus processos judiciários. " />
         <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"></meta>
-
-          
             
       </Head>
       <body>
@@ -50,11 +49,4 @@ export default function Document({ locale }) {
       </body>
     </Html>
   )
-}
-function getInitialProps({ renderPage, req }) {
-
-  return {
-    ...page,
-    locale: req.locale,
-  };
 }

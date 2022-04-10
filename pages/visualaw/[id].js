@@ -23,6 +23,8 @@ import { BsFillPrinterFill } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { AiFillSound } from "react-icons/ai";
 
+// Componets
+import { ThemeToggle } from '../../components/ThemeToggle.js';
 
 function Visuallaw({href}) {
   const [visualLaw, setVisualLaw] = useState();
@@ -74,6 +76,7 @@ function Visuallaw({href}) {
 
   return (
     <div className="visual-law container">
+      <ThemeToggle />
       <div className="content">
         <div className="buttons">
 

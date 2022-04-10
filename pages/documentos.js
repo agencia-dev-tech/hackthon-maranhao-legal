@@ -45,9 +45,6 @@ export default function Documentos() {
             <HiOutlineDocumentText size={15} />
             <h4>{docs?.cpf}</h4>
           </div>
-
-          {/* <h4>Registros até 2022</h4> */}
-          
         </div>
         
       </div>

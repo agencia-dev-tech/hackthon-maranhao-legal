@@ -14,17 +14,45 @@ html {
   --green700: #128A89;
 }
 
-html[data-theme='dark'] {
+html[data-theme='dark'], html[data-theme='alto-contraste']{
   // Dark
   --secondColor: #F8F5F0;
   --bg: #303030;
   --textLigth: #F8F5F0;
   --textLigth300: #F8F5F0;
   --black: #F8F5F0;
+  --primaryColor500: #E84037;
+  // --green500: #181818;
+  // --green700: #080808;
 
   button.primary {
     background-color: var(--bg);
     border: 1px solid var(--textLigth);
+  }
+
+  .arrow img, .moviment img, img.logo, .partners {
+    filter: brightness(100);
+  }
+}
+
+html[data-theme='alto-contraste'] {
+  // Dark
+  --secondColor: #F8F5F0;
+  --bg: #303030;
+  --textLigth: #F8F5F0;
+  --textLigth300: #F8F5F0;
+  --black: #F8F5F0;
+  --primaryColor500: #E84037;
+  // --green500: #181818;
+  // --green700: #080808;
+
+  button.primary {
+    background-color: var(--bg);
+    border: 1px solid var(--textLigth);
+  }
+
+  .arrow img, .moviment img, img.logo, .partners {
+    filter: brightness(100);
   }
 }
 
