@@ -1,9 +1,5 @@
 import React, { useState, useLayoutEffect, useEffect } from 'react';
 import { useRouter } from 'next/router';
-// import { useSpeechSynthesis } from "react-speech-kit";
-
-
-
 
 
 import { toast } from 'react-toastify';
@@ -18,6 +14,8 @@ import { useApp } from "../hooks/AppContext";
 // Icons
 import { FaUserAlt } from "react-icons/fa";
 import { HiOutlineDocumentText } from "react-icons/hi";
+
+// Componets
 import { ThemeToggle } from '../components/ThemeToggle.js';
 
 export default function Documentos() {

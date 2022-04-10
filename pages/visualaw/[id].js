@@ -21,7 +21,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { AiFillSound } from "react-icons/ai";
 
 
-export default function Visuallaw() {
+function Visuallaw({href}) {
   const [visualLaw, setVisualLaw] = useState();
   const router = useRouter();
 
@@ -84,7 +84,7 @@ export default function Visuallaw() {
           </button>
 
           <button >
-            <a href={`https://web.whatsapp.com/send?text=${window?.location?.href}`} data-action="share/whatsapp/share" target="_blank" rel="noreferrer">
+            <a href={`https://web.whatsapp.com/send?text=${href}`} data-action="share/whatsapp/share" target="_blank" rel="noreferrer">
             <div className="icon-container">
               <IoLogoWhatsapp size={20} />
               <p>Compartilhar</p>
@@ -92,8 +92,6 @@ export default function Visuallaw() {
           </a>  
           </button>
 
-
-        
          
         </div>
         <h1>Resumo da Sentença</h1>
@@ -138,3 +136,5 @@ export default function Visuallaw() {
     </div>
   )
 }
+
+export default Visuallaw;
