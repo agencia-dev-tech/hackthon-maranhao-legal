@@ -9,6 +9,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../assets/scss/main.scss';
 
+import '../assets/styles/fonts.css';
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
