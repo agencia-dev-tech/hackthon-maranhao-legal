@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { useSpeechSynthesis } from "react-speech-kit";
 
 import { toast } from 'react-toastify';
@@ -6,6 +7,9 @@ import Link from 'next/link'
 
 // Api;
 import { api } from "../services/api.js";
+
+// Context
+import { useApp } from "../hooks/AppContext";
 
 // Components
 import InputMask from 'react-input-mask';
@@ -19,9 +23,10 @@ import { HiSpeakerphone } from "react-icons/hi";
 export default function Home() {
   const [cpf, setCpf] = useState();
   const [supported, setSupported] = useState();
-  
-  const { speak } = useSpeechSynthesis();
+  const router = useRouter();
 
+  const { speak } = useSpeechSynthesis();
+  const { setDocs } = useApp();
 
   function handleOnChange(event) {
     const value = event.target.value;
@@ -42,6 +47,7 @@ export default function Home() {
   }
 
   async function handleGetDocuments(event) {
+    speaktext("Buscando suas informações");
     const idLoading = toast.loading("Buscando suas informações...")
     try {
       event.preventDefault();
@@ -49,22 +55,24 @@ export default function Home() {
       if(!cpf || cpf === "") {
        throw new Error("Por favor, Coloque um CPF no campo indicado!");
       }
-      console.log(cpf)
-      speaktext("Buscando suas informações");
-      
+
       const { data } = await api.get(`/v1_documents/${cpf}`);
       
       if(data?.error) {
         throw new Error("Não encontramos processos com esse CPF!");
       }
 
-      toast.update(idLoading, { render: message, type: "success", isLoading: false, autoClose: 4000 });
+      setDocs({...data.data, cpf});
+      router.push("/documentos");
 
+      speaktext("Processos encontrados!");
+      toast.update(idLoading, { render: "Processos encontrados!", type: "success", isLoading: false, autoClose: 4000 });
 
     } catch (error) {
       const message = error?.message ?? "Ops, Ocorreu um erro, tente novamente!";
+      
       speaktext(message);
-      toast.update(idLoading, { render: message, type: "error", isLoading: false, autoClose: 4000 });
+      toast.update(idLoading, { render: message || " ", type: "error", isLoading: false, autoClose: 4000 });
 
     } finally {
       setCpf("");

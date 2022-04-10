@@ -8,6 +8,7 @@ html {
   --secondColor: #24387F;
   --bg: #F8F5F0;
   --textLigth: #F8F5F0;
+  --textLigth300: #fafafa;
   --black: #303030;
 }
 
@@ -84,5 +85,10 @@ a {
   // }
 }
 
+.enabled {
+  margin-right: 20px;
+}
+
 // Pages
 @import "./pages/home";
+@import "./pages/documents";

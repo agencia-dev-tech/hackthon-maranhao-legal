@@ -1,4 +1,9 @@
 import Head from 'next/head'
+import VLibras from '@djpfs/react-vlibras'
+
+
+import { AppProvider } from "../hooks/AppContext";
+
 import { ToastContainer } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,11 +13,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-    
-        <title>Maranhã Legal</title>
+        <title>Maranhão Legal</title>
       </Head>
-      <ToastContainer  role="alert"  />
-      <Component {...pageProps} />
+      <VLibras />
+      <AppProvider>
+        <ToastContainer  role="alert"  />
+        <Component {...pageProps} />
+      </AppProvider>
     </>
   )
 }
