@@ -1,6 +1,5 @@
 import React, { useState, useLayoutEffect, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { useSpeechSynthesis } from "react-speech-kit";
 
 import { toast } from 'react-toastify';
 import Link from 'next/link'
@@ -23,11 +22,9 @@ import { ThemeToggle } from '../components/ThemeToggle.js';
 
 export default function Home() {
   const [cpf, setCpf] = useState();
-  const [supported, setSupported] = useState();
   const router = useRouter();
 
-  const { speak } = useSpeechSynthesis();
-  const { setDocs } = useApp();
+  const { setDocs, speaktext } = useApp();
 
   function handleOnChange(event) {
     const value = event.target.value;
@@ -36,16 +33,7 @@ export default function Home() {
     setCpf(unmask);
   }
 
-  function speaktext(text) {
-    if (!supported) return;
-
-    const voice = window?.speechSynthesis.getVoices().find(item => item.name === "Google português do Brasil");
-
-    speak({
-      text: text,
-      voice,
-    });
-  }
+  
 
   async function handleGetDocuments(event) {
     speaktext("Buscando suas informações");
@@ -79,13 +67,6 @@ export default function Home() {
       setCpf("");
     }
   }
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.speechSynthesis) {
-      setSupported(true);
-    }
-  }, []);
-
 
   return (
     <div className="home">

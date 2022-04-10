@@ -48,7 +48,7 @@ export default function Documentos() {
             <h4>{docs?.cpf}</h4>
           </div>
 
-          <h4>Registros até 2022</h4>
+          {/* <h4>Registros até 2022</h4> */}
           
         </div>
         

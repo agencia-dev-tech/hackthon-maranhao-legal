@@ -83,12 +83,14 @@
 
     strong {
       color: var(--primaryColor500);
+      text-transform: capitalize;
     }
 
     h3 {
       color: var(--black);
       font-size: 16px;
       margin-top: 0px;
+      
     }
 
     img {
@@ -109,6 +111,25 @@
       margin-right: 8px;
     }
   }
+
+  .buttons {
+    margin-bottom: 24px;
+    button {
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+
+      color: var(--secondColor);
+      
+      p {
+        font-size: 18px;
+        margin-left: 2px;
+      }
+      & + button {
+        margin-left: 16px;
+      }
+    }
+  }
 }
 
 
@@ -117,13 +138,36 @@
     .infos {
       width: 100%;
       flex-wrap: wrap;
-      // .info-item {
+      
+    }
+    .orientation {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media (max-width: 426px)  {
+
+  .visual-law {
+    display: block;
+    padding: 46px 15px;
+    
+    h1 {
+      font-size: 29px;
+    }
+
+    .infos {
+      .info-item {
+        border-radius: 10px 10px 0 0;
+  
+        &:nth-child(2) {
+          border-radius: 0 0 10px 10px;
+        }
+      }
     }
   }
 }
 
 
-
-// @media (ma
 
 
