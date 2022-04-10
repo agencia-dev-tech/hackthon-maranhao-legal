@@ -73,15 +73,15 @@ export default function Home() {
       <div className="content">
         <div className="image-container"></div>
         <div className="form">
-          <img className="logo" src="./image/logo.png" alt="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" title="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão"  longdesc="#logo"/>
+          <img role="logo" className="logo" src="./image/logo.png" alt="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" title="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão"  longdesc="#logo"/>
 
           <ThemeToggle />
 
           <div className="modal">
-            <form onSubmit={handleGetDocuments}>
-              <div className="form-group">
-                <label>Digite seu CPF:</label>
-                <InputMask placeholder="Digite seu CPF" mask="999-999-999-99" value={cpf} onChange={handleOnChange}/>
+            <form onSubmit={handleGetDocuments} role="search">
+              <div className="form-group" role="buscar-cpf">
+                <label htmlFor="inputCpf" role="label" aria-label="1">Digite seu CPF:</label>
+                <InputMask id="inputCpf" name="cpf" placeholder="Digite seu CPF" mask="999-999-999-99" value={cpf} onChange={handleOnChange}/>
 
                 <button className="primary" type="submit">Buscar processos</button>
               </div>
@@ -90,7 +90,7 @@ export default function Home() {
           <div className="contact">
             <div className="icon-container">
               <MdContacts size={20} />
-              <h2>Contatos</h2>
+              <h2 aria-label="2">Contatos</h2>
             </div>
             <div className="content">
               <div className="group"> 
@@ -99,9 +99,9 @@ export default function Home() {
                   <a target="_blank" >
                     <div className="icon-container">
                       <GiInjustice size={15}/>
-                      <h3>TJ do Estado do Maranhão</h3>
+                      <h3 aria-label="3">TJ do Estado do Maranhão</h3>
                     </div>
-                    <h4>https://www.tjma.jus.br/</h4>
+                    <h4 aria-label="4" >https://www.tjma.jus.br/</h4>
                   </a>
                 </Link>
 
