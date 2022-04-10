@@ -28,7 +28,7 @@ export default function Visuallaw() {
    const { speaktext } = useApp();
   
   function handlePrintVisualLaw() {
-    window.print();
+    window?.print();
   }
 
   function handldeHearDocument() {
@@ -84,7 +84,7 @@ export default function Visuallaw() {
           </button>
 
           <button >
-            <a href={`https://web.whatsapp.com/send?text=${window.location.href}`} data-action="share/whatsapp/share" target="_blank" rel="noreferrer">
+            <a href={`https://web.whatsapp.com/send?text=${window?.location?.href}`} data-action="share/whatsapp/share" target="_blank" rel="noreferrer">
             <div className="icon-container">
               <IoLogoWhatsapp size={20} />
               <p>Compartilhar</p>
