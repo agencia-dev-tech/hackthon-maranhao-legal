@@ -95,7 +95,7 @@ export default function Home() {
             <form onSubmit={handleGetDocuments}>
               <div className="form-group">
                 <label>Digite seu CPF:</label>
-                <InputMask mask="999-999-999-99" value={cpf} onChange={handleOnChange}/>
+                <InputMask placeholder="Digite seu CPF" mask="999-999-999-99" value={cpf} onChange={handleOnChange}/>
 
                 <button className="primary" type="submit">Buscar processos</button>
               </div>

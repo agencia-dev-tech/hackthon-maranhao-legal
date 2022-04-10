@@ -3,27 +3,26 @@
 
 html {
   --primaryColor: #E84037;
+  --primaryColor500: #830403;
   --secondColor: #24387F;
   --bg: #F8F5F0;
   --textLigth: #F8F5F0;
   --textLigth300: #fafafa;
   --black: #303030;
+
+  --green500: #169B9A;
+  --green700: #128A89;
 }
 
 
 
 html[data-theme='dark'] {
   background: var(--primaryColor);
- 
-//  --lightBg: #232323;
-//  --lightColor: #fff;
 }
 
 * {
-  font-family: 'Nunito', sans-serif;
   box-sizing: border-box;
-  outline: var(--primaryColor);
-  
+  outline: var(--primaryColor); 
 }
 
 html, body, #__next {
@@ -90,3 +89,4 @@ a {
 // Pages
 @import "./pages/home";
 @import "./pages/documents";
+@import "./pages/visuallaw";
