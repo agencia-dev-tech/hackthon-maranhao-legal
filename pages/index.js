@@ -57,7 +57,7 @@ export default function Home() {
        throw new Error("Por favor, Coloque um CPF no campo indicado!");
       }
 
-      const { data } = await api.get(`/v1_documents/${cpf}`);
+      const { data } = await api.get(`/v1_documents/126`);
       
       if(data?.error) {
         throw new Error("Não encontramos processos com esse CPF!");
