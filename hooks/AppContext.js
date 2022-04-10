@@ -1,14 +1,27 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 
 export const AppContext = createContext();
+
+export const themesOptions = {
+  light: 'light',
+  dark: 'dark',
+}
 
 export function AppProvider({ children }) {
   const [docs, setDocs] = useState(null);
 
+  const [theme, setTheme] = useState(themesOptions.light)
+
+  useEffect(() => {
+    window.document.documentElement.setAttribute('data-theme', theme)
+  }, [theme])
+
   return (
     <AppContext.Provider value={{
       docs,
-      setDocs
+      setDocs,
+      theme, 
+      setTheme
     }}>
       {children}
     </AppContext.Provider>

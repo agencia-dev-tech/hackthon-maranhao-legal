@@ -1,8 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap');
 
-
-
 html {
   --primaryColor: #E84037;
   --secondColor: #24387F;
@@ -12,13 +10,18 @@ html {
   --black: #303030;
 }
 
-
-
 html[data-theme='dark'] {
-  background: var(--primaryColor);
- 
-//  --lightBg: #232323;
-//  --lightColor: #fff;
+  // Dark
+  --secondColor: #F8F5F0;
+  --bg: #303030;
+  --textLigth: #F8F5F0;
+  --textLigth300: #F8F5F0;
+  --black: #F8F5F0;
+
+  button.primary {
+      background-color: var(--bg);
+      border: 1px solid var(--textLigth);
+  }
 }
 
 * {
@@ -41,6 +44,10 @@ html, body, #__next {
 
 h1, h2, h3, h4, p {
   margin: 0;
+}
+
+label {
+  color: var(--black);
 }
 
 .container {

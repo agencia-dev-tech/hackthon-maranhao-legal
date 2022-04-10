@@ -19,6 +19,7 @@ import { MdContacts, MdPhone } from 'react-icons/md';
 import { GiInjustice } from "react-icons/gi";
 import { RiTelegramFill } from "react-icons/ri";
 import { HiSpeakerphone } from "react-icons/hi";
+import { ThemeToggle } from '../components/ThemeToggle.js';
 
 export default function Home() {
   const [cpf, setCpf] = useState();
@@ -85,12 +86,16 @@ export default function Home() {
     }
   }, []);
 
+
   return (
     <div className="home">
       <div className="content">
         <div className="image-container"></div>
         <div className="form">
           <img className="logo" src="./image/logo.png" alt="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" title="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" />
+          
+          <ThemeToggle />
+
           <div className="modal">
             <form onSubmit={handleGetDocuments}>
               <div className="form-group">
