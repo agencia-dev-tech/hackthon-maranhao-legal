@@ -31,7 +31,7 @@ export default function Documentos() {
   return (
     <div className="documents container">
     
-      <h1>Veja seus processos abaixo</h1>
+      <h1>Veja seus processos abaixo: </h1>
 
       <ThemeToggle />
 

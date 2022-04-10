@@ -10,6 +10,9 @@ import Link from 'next/link'
 // Api;
 import { api } from "../../services/api.js";
 
+// Utils
+import { generateLinkWhasApp } from "../../utils/index.js";
+
 // Context
 import { useApp } from "../../hooks/AppContext";
 
@@ -84,18 +87,30 @@ function Visuallaw({href}) {
           </button>
 
           <button >
-            <a href={`https://web.whatsapp.com/send?text=${href}`} data-action="share/whatsapp/share" target="_blank" rel="noreferrer">
-            <div className="icon-container">
-              <IoLogoWhatsapp size={20} />
-              <p>Compartilhar</p>
-            </div>
-          </a>  
+            <a href={generateLinkWhasApp(href)} data-action="share/whatsapp/share" target="_blank" rel="noreferrer">
+              <div className="icon-container">
+                <IoLogoWhatsapp size={20} />
+                <p>Compartilhar</p>
+              </div>
+            </a>
           </button>
 
-         
         </div>
         <h1>Resumo da Sentença</h1>
-        <h3><strong>Processo nº:</strong> {visualLaw?.data?.processNumber}</h3>
+        <div className="info-header">
+          <div className="info-header-content">
+            <h3><strong>CPF:</strong> {visualLaw?.data?.cpf}</h3>
+            <h3><strong>Processo nº:</strong> {visualLaw?.data?.processNumber}</h3>
+          </div>
+          <div className="info-header-content">
+            <h3><strong>Ultima Atualização:</strong> {visualLaw?.data?.distributionDate}</h3>
+            <h3><strong>Órgão Julgador:</strong> {visualLaw?.data?.judgingBody}</h3>
+          </div>
+          <div className="info-header-content">
+            <h3><strong>Jurisdição:</strong> {visualLaw?.data?.jurisdiction}</h3>
+            <h3><strong>Classe Judicial:</strong> {visualLaw?.data?.judicialClass}</h3>
+          </div>
+        </div>
         <div className="infos">
           <div className="info-item">
             <FaUser size={50} />
@@ -121,14 +136,14 @@ function Visuallaw({href}) {
           <img src="/image/hammer.png" alt="Icone de uma martelo batendo em uma base" title="Icone de uma martelo batendo em uma base" />
           <div className="moviment-content">
             <strong>Movimento: {visualLaw?.pdfData?.conclusion}</strong>
-            <h3>Hope this helps. Be sure to leave comments if you have any thoughts on this article or have any other use case to show. And if you find it helpful, give me a clap 👏 and share it. Thanks for reading!</h3>
+            <h3>{visualLaw?.data.description}</h3>
           </div>
         </div>
         
         <div className="orientation">
         <div className="icon-container">
             <MdOutlineContactSupport size={35} />
-            <h4>Caso ainda tenha duvidas fale com seu advogado ou defensor publico.</h4>
+            <h4>Caso ainda tenha dúvidas, fale com seu advogado(a) ou defensor(a) público(a).</h4>
           </div>
         </div>
       {/* <img src="/image/logo-tjma.png" alt="Portal do poder judiciário do estado do maranhão" title="Portal do poder judiciário do estado do maranhão" /> */}

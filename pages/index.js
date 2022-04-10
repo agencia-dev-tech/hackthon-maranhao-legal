@@ -99,9 +99,9 @@ export default function Home() {
                   <a target="_blank" >
                     <div className="icon-container">
                       <GiInjustice size={15}/>
-                      <h3>Tribunal Geral de São Luis</h3>
+                      <h3>TJ do Estado do Maranhão</h3>
                     </div>
-                    <h4>www.informatica.tjmg.jus.br</h4>
+                    <h4>https://www.tjma.jus.br/</h4>
                   </a>
                 </Link>
 
@@ -116,22 +116,22 @@ export default function Home() {
                 </Link>
               </div>
               <div className="group"> 
-                <Link href="https://t.me/puxardadosgrati">
+                <Link href="https://t.me/muraltjma">
                   <a target="_blank" >
                     <div className="icon-container">
                       <RiTelegramFill size={15}/>
                       <h3>Telegram</h3>
                     </div>
-                    <h4>t.me/puxardadosgrati</h4>
+                    <h4>t.me/muraltjma</h4>
                   </a>
                 </Link>
-                <Link href="#">
+                <Link href="tel:+983194-660">
                   <a target="_blank" >
                     <div className="icon-container">
                       <HiSpeakerphone size={15}/>
-                      <h3>Plantão do PJE</h3>
+                      <h3>Informática TJMA</h3>
                     </div>
-                    <h4>t.me/puxardadosgrati</h4>
+                    <h4>(98) 3194-660</h4>
                   </a>
                 </Link>
               </div>
