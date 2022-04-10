@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript, DocumentHead } from 'next/document'
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="pt-br">
       <Head>
         <meta httpEquiv="Content-Language" content="pt-br" />
 
