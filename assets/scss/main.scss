@@ -126,15 +126,28 @@ a {
   margin-right: 20px;
 }
 
-.change-theme {
+.all-toggle {
   position: absolute;
   top: 40px;
   right: 40px;
-  border: none;
-  background: transparent;
-  
-  cursor: pointer;
 
+  display: flex;
+  div + div {
+    margin-left: 10px;
+  }
+  > div {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 426px)  {
+  .all-toggle {
+    flex-direction: column;
+    
+    div + div {
+      margin-left: 0px;
+    }
+  }
 }
 
 // Pages

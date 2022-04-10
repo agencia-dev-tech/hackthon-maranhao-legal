@@ -4,14 +4,16 @@ import { useApp } from "../hooks/AppContext";
 import { BsMoon, BsSun } from "react-icons/bs"
 
 export function ThemeToggle() {
-  const { isThemeDark, setIsThemeDark } = useApp();
+  const { isThemeDark, setIsThemeDark, isContrast } = useApp();
 
+  const color = (isThemeDark || isContrast) ? "#fff" : "#303030";
+  
   return (
-    <div className='change-theme' onClick={() => setIsThemeDark(!isThemeDark)}>
+    <div onClick={() => setIsThemeDark(!isThemeDark)}>
       {isThemeDark ? (
-        <BsSun size={25} color="white" />
+        <BsSun size={25} color={color} />
         ) : (
-        <BsMoon size={25} />
+        <BsMoon size={25} color={color} />
       )}
     </div>
   )

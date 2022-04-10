@@ -6,8 +6,9 @@ export const AppContext = createContext();
 export function AppProvider({ children }) {
   const [docs, setDocs] = useState(null);
   const [isThemeDark, setIsThemeDark] = useState(false);
-  const [supported, setSupported] = useState();
-
+  const [supported, setSupported] = useState(false);
+  const [isContrast, setIsContrast] = useState(false);
+  
   const { speak } = useSpeechSynthesis();
 
   function speaktext(text) {
@@ -20,12 +21,16 @@ export function AppProvider({ children }) {
       voice,
     });
   }
-  // speaktext("testa")
 
   useEffect(() => {
     const theme = isThemeDark ? "dark" : "light";
     window.document.documentElement.setAttribute('data-theme', theme)
   }, [isThemeDark])
+
+  useEffect(() => {
+    window.document.documentElement.setAttribute('data-theme', isContrast ? "alto-contraste" : "")
+  }, [isContrast]);
+
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window.speechSynthesis) {
@@ -41,7 +46,9 @@ export function AppProvider({ children }) {
       setIsThemeDark,
       speaktext,
       supported,
-      setSupported
+      setSupported,
+      isContrast,
+      setIsContrast
     }}>
       {children}
     </AppContext.Provider>
