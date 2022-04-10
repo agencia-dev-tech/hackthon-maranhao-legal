@@ -15,6 +15,7 @@
     "react-dom": "18.0.0",
     "react-icons": "^4.3.1",
     "react-input-mask": "^2.0.4",
+    "react-speech-kit": "^3.0.1",
     "react-toastify": "^8.2.0"
   },
   "devDependencies": {

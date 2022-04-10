@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
     
         <title>Maranhã Legal</title>
       </Head>
-      <ToastContainer />
+      <ToastContainer  role="alert"  />
       <Component {...pageProps} />
     </>
   )

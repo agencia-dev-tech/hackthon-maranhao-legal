@@ -1,28 +1,81 @@
-import React, { useState } from 'react';
-import InputMask from 'react-input-mask';
+import React, { useState, useLayoutEffect, useEffect } from 'react';
+import { useSpeechSynthesis } from "react-speech-kit";
+
+import { toast } from 'react-toastify';
 import Link from 'next/link'
+
+// Api;
+import { api } from "../services/api.js";
+
+// Components
+import InputMask from 'react-input-mask';
+
+// Icons
 import { MdContacts, MdPhone } from 'react-icons/md';
 import { GiInjustice } from "react-icons/gi";
 import { RiTelegramFill } from "react-icons/ri";
 import { HiSpeakerphone } from "react-icons/hi";
 
-
 export default function Home() {
   const [cpf, setCpf] = useState();
+  const [supported, setSupported] = useState();
+  
+  const { speak } = useSpeechSynthesis();
 
-  function onChange(event) {
+
+  function handleOnChange(event) {
     const value = event.target.value;
+    const unmask = value.replace(/[^\d]/g, '');
 
-    setCpf(value);
+    setCpf(unmask);
   }
 
-  function handleGetDocuments(){
+  function speaktext(text) {
+    if (!supported) return;
+
+    const voice = window?.speechSynthesis.getVoices().find(item => item.name === "Google português do Brasil");
+
+    speak({
+      text: text,
+      voice,
+    });
+  }
+
+  async function handleGetDocuments(event) {
+    const idLoading = toast.loading("Buscando suas informações...")
     try {
+      event.preventDefault();
+
+      if(!cpf || cpf === "") {
+       throw new Error("Por favor, Coloque um CPF no campo indicado!");
+      }
+      console.log(cpf)
+      speaktext("Buscando suas informações");
       
+      const { data } = await api.get(`/v1_documents/${cpf}`);
+      
+      if(data?.error) {
+        throw new Error("Não encontramos processos com esse CPF!");
+      }
+
+      toast.update(idLoading, { render: message, type: "success", isLoading: false, autoClose: 4000 });
+
+
     } catch (error) {
-      
+      const message = error?.message ?? "Ops, Ocorreu um erro, tente novamente!";
+      speaktext(message);
+      toast.update(idLoading, { render: message, type: "error", isLoading: false, autoClose: 4000 });
+
+    } finally {
+      setCpf("");
     }
   }
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.speechSynthesis) {
+      setSupported(true);
+    }
+  }, []);
 
   return (
     <div className="home">
@@ -31,12 +84,14 @@ export default function Home() {
         <div className="form">
           <img className="logo" src="./image/logo.png" alt="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" title="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" />
           <div className="modal">
-            <div className="form-group">
-              <label>Digite seu CPF:</label>
-              <InputMask mask="999-999-999-99" />
+            <form onSubmit={handleGetDocuments}>
+              <div className="form-group">
+                <label>Digite seu CPF:</label>
+                <InputMask mask="999-999-999-99" value={cpf} onChange={handleOnChange}/>
 
-              <button className="primary">Buscar processos</button>
-            </div>
+                <button className="primary" type="submit">Buscar processos</button>
+              </div>
+            </form>
           </div>
           <div className="contact">
             <div className="icon-container">
