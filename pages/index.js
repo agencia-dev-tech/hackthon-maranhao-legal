@@ -73,8 +73,8 @@ export default function Home() {
       <div className="content">
         <div className="image-container"></div>
         <div className="form">
-          <img className="logo" src="./image/logo.png" alt="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" title="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" />
-          
+          <img className="logo" src="./image/logo.png" alt="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" title="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão"  longdesc="#logo"/>
+
           <ThemeToggle />
 
           <div className="modal">
@@ -137,7 +137,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <img className="partners" src="./image/parceiros.png" alt="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" title="Logo do projeto Maranhão Legal: Escrita Legal em azul e ao lado a representação geografica do estado do maranhão" />
+          <img className="partners" src="./image/parceiros.png" alt="Banner com as logos do Judiciário exponencial,  Toada Lab e do Tribunal de Justiça do Maranhão." title="Banner com as logos do Judiciário exponencial,  Toada Lab e do Tribunal de Justiça do Maranhão." longdesc="#parceiros" />
         </div>
       </div>
     </div>

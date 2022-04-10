@@ -7,12 +7,12 @@ export function ThemeToggle() {
   const { isThemeDark, setIsThemeDark } = useApp();
 
   return (
-    <button className='change-theme' onClick={() => setIsThemeDark(!isThemeDark)}>
+    <div className='change-theme' onClick={() => setIsThemeDark(!isThemeDark)}>
       {isThemeDark ? (
         <BsSun size={25} color="white" />
         ) : (
         <BsMoon size={25} />
       )}
-    </button>
+    </div>
   )
 }

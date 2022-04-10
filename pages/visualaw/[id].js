@@ -128,12 +128,12 @@ function Visuallaw({href}) {
           </div>
         </div>
         <div className="arrow">
-          <img src="/image/arrow-result.png" alt="Linha pontinhalda com duas setas apontada para o reclamente e reclado" title="Linha pontinhalda com duas setas apontada para o reclamente e reclado" />
+          <img src="/image/arrow-result.png" alt="Linha pontinhalda com duas setas apontada para o reclamente e reclado" title="Linha pontinhalda com duas setas apontada para o reclamente e reclado" longdesc="#linhaPontinhada"/>
           <h4>Resultado</h4>
         </div>
 
         <div className="moviment">
-          <img src="/image/hammer.png" alt="Icone de uma martelo batendo em uma base" title="Icone de uma martelo batendo em uma base" />
+          <img src="/image/hammer.png" alt="Icone de uma martelo batendo em uma base" title="Icone de uma martelo batendo em uma base" longdesc="#martelo" />
           <div className="moviment-content">
             <strong>Movimento: {visualLaw?.pdfData?.conclusion}</strong>
             <h3>{visualLaw?.data.description}</h3>
