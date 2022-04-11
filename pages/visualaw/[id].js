@@ -1,11 +1,6 @@
 import React, { useState, useLayoutEffect, useEffect } from 'react';
 import { useRouter } from 'next/router';
-// import { useSpeechSynthesis } from "react-speech-kit";
 
-
-
-import { toast } from 'react-toastify';
-import Link from 'next/link'
 
 // Api;
 import { api } from "../../services/api.js";
@@ -24,7 +19,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { AiFillSound } from "react-icons/ai";
 
 // Componets
-import { ThemeToggle } from '../../components/ThemeToggle.js';
+import { AllToggleAccessibility } from '../../components/AllToggleAccessibility.js';
 
 function Visuallaw({href}) {
   const [visualLaw, setVisualLaw] = useState();
@@ -76,7 +71,7 @@ function Visuallaw({href}) {
 
   return (
     <div className="visual-law container">
-      <ThemeToggle />
+      <AllToggleAccessibility />
       <div className="content">
         <div className="buttons">
 
@@ -144,7 +139,7 @@ function Visuallaw({href}) {
           <img src="/image/hammer.png" alt="Icone de uma martelo batendo em uma base" title="Icone de uma martelo batendo em uma base" longdesc="#martelo" />
           <div className="moviment-content">
             <strong>Movimento: {visualLaw?.pdfData?.conclusion}</strong>
-            <h3>{visualLaw?.data.description}</h3>
+            <h3>{visualLaw?.data?.fullDescription}</h3>
           </div>
         </div>
         

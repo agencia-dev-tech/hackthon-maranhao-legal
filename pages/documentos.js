@@ -16,7 +16,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { HiOutlineDocumentText } from "react-icons/hi";
 
 // Componets
-import { ThemeToggle } from '../components/ThemeToggle.js';
+import { AllToggleAccessibility } from '../components/AllToggleAccessibility.js';
 
 export default function Documentos() {
   const { docs } = useApp();
@@ -33,7 +33,7 @@ export default function Documentos() {
     
       <h1>Veja seus processos abaixo: </h1>
 
-      <ThemeToggle />
+      <AllToggleAccessibility />
 
       <div className="info">
         <div className="icon-container">

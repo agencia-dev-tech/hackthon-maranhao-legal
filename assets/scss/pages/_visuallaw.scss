@@ -87,11 +87,13 @@
   }
 
   .moviment {
+    max-width: 550px;
+    width: 100%;
+    
     display: flex;
     align-items: flex-start;
 
     margin-top: 16px;
-
     strong {
       color: var(--primaryColor500);
       text-transform: capitalize;
@@ -101,7 +103,7 @@
       color: var(--black);
       font-size: 16px;
       margin-top: 0px;
-      
+      text-align: center;
     }
 
     img {
