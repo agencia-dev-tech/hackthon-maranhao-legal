@@ -11,9 +11,19 @@
     font-weight: 700;
     color: var(--secondColor);
 
-    margin-bottom: 24px;
+    margin-bottom: 8px;
   }
+  .warning {
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
 
+    color: var(--warning);
+    opacity: 0.9;
+    align-items: flex-end;
+    // font-weight: 700;
+  }
   .document {
     max-width: 700px;
     width: 100%;
@@ -59,4 +69,9 @@
     }
   }
 
+}
+@media (max-width: 768px)  {
+  .documents {
+    margin-top: 100px;
+  }
 }

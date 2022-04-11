@@ -1,12 +1,9 @@
-import React, { useState, useLayoutEffect, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 
-import { toast } from 'react-toastify';
 import Link from 'next/link'
 
-// Api;
-import { api } from "../services/api.js";
 
 // Context
 import { useApp } from "../hooks/AppContext";
@@ -14,6 +11,7 @@ import { useApp } from "../hooks/AppContext";
 // Icons
 import { FaUserAlt } from "react-icons/fa";
 import { HiOutlineDocumentText } from "react-icons/hi";
+import { TiWarning } from "react-icons/ti";
 
 // Componets
 import { AllToggleAccessibility } from '../components/AllToggleAccessibility.js';
@@ -32,6 +30,10 @@ export default function Documentos() {
     <div className="documents container">
     
       <h1>Veja seus processos abaixo: </h1>
+      <div className="warning">
+        <TiWarning size={50} />
+        <p>Por falta de acesso a api do PJE, estamos utilizando um banco de dados interno.</p>
+      </div>
 
       <AllToggleAccessibility />
 

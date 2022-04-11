@@ -12,6 +12,8 @@ html {
 
   --green500: #169B9A;
   --green700: #128A89;
+
+  --warning: #e8b737;
 }
 
 html[data-theme='dark'], html[data-theme='alto-contraste']{
@@ -22,6 +24,8 @@ html[data-theme='dark'], html[data-theme='alto-contraste']{
   --textLigth300: #F8F5F0;
   --black: #F8F5F0;
   --primaryColor500: #E84037;
+  --warning: #F8F5F0;
+  
   // --green500: #181818;
   // --green700: #080808;
 
