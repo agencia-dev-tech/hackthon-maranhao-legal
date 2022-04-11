@@ -47,7 +47,7 @@ function Visuallaw({href}) {
 
     speaktext(`Resultado`);
     speaktext(`Movimento: ${visualLaw?.pdfData?.conclusion}`);
-    speaktext(visualLaw?.pdfData?.defendant);
+    speaktext(visualLaw?.data?.fullDescription);
 
      speaktext(`Caso ainda tenha dúvidas, fale com seu advogado(a) ou defensor(a) público(a).`);
   }
