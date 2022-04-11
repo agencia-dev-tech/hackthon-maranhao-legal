@@ -1,15 +1,22 @@
 <h1 align="center">
-    <img alt="Maranhão Lega" src="https://github.com/W8jonas/maranhao-legal-backend/blob/main/fotos_do_projeto/frame3.png" width=200 />
+    <img alt="Maranhão Legal" src="https://github.com/W8jonas/maranhao-legal-backend/blob/main/fotos_do_projeto/frame3.png" width=200 />
     <br>
     📚 Maranhão Legal 📚
 </h1>
 
 <h4 align="center">
-        Acesse agora nosso site!
+        Acesse agora nosso site institucional,
+        <a href="https://sites.google.com/view/maranhaolegal"> clique aqui </a>
+</h4>
+
+<h4 align="center">
+        Acesse agora nosso web site,
         <a href="https://maranhao-legal.herokuapp.com/">
         clique aqui
         </a>
 </h4>
+
+<br />
 
 <h3 align="center">
     Por que a melhor justiça é fácil e acessível
@@ -38,6 +45,8 @@ O Maranhão também ficou entre os últimos estados brasileiros no ranking de ac
 O que causa diversos problemas para a população maranhense no que diz respeito ao acesso a justiça e ao entendimento da mesma.
 
 
+![mockup](https://i.imgur.com/1ccEbT1.png)
+
 ## Nosso produto
 
 Somos uma plataforma digital que promove facilidade do entendimento das sentenças públicas do estado do Maranhão. Atuamos em 4 principais frentes:
@@ -50,13 +59,11 @@ Somos uma plataforma digital que promove facilidade do entendimento das sentenç
 
 4. Dentro dos processos o indivíduo vai poder ver a sentença resumida visualmente, além de poder ouvir, baixar, imprimir e enviar essa sentença.
 
-
+<img src="https://i.imgur.com/lgFQV82.png" alt="Antes e depois" />
 
 ## Tecnologias
 
-Esse repositório trata do backend serveless do **Firebase**, utilizando a linguagem **Javascript**.
-
-Escolhermos o Firebase para compor nosso banckend por ser uma solução robusta e gratuita, além de permitir o armazenamento dos dados de forma simples e eficiente.
+Esse repositório trata do Front end, utilizando a linguagem **Next.js**.
 
 <details>
   <summary>Tecnologias detalhadas</summary>
@@ -80,6 +87,23 @@ Acesse agora nosso site,
 <a href="https://maranhao-legal.herokuapp.com/">
 clique aqui.
 </a>
+
+Acesse agora nosso site institucional,
+<a href="https://sites.google.com/view/maranhaolegal/">
+clique aqui.
+</a>
+
+Conheça o código da nossa solução backend que extrai os textos das sentenças,
+<a href="https://github.com/W8jonas/maranhao-legal-pdf-api">
+clique aqui.
+</a>
+
+Conheça o código da nossa solução frontend (site Maranhão Legal),
+<a href="https://github.com/agencia-dev-tech/hackthon-maranhao-legal">
+clique aqui.
+</a>
+
+<br/>
 
 ## Nosso time:
 
